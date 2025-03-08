@@ -1,0 +1,41 @@
+#!/bin/bash
+
+case "$1" in
+    "btkmargin")
+        echo -e "BTKMAN\n\n"
+        echo -e "NAME:\n  BTKmargin\n"
+        echo -e "LIBRARY\n  Btkutils (-lbtkutils)\n"
+        echo -e "SYNOPSIS\n  #include <btkutils.h>\n  BTKmargin(int a);\n"
+        echo -e "DESCRIPTION:\n  BTKmargin()\n    Allows for big ASCII text or other to be centered on the commandline.\n"
+        echo -e "ERRORS:\n  BTKmargin function will throw an error if it gets any value other than an int\n"
+        echo -e "NOTES:\n  BTKmargin calculates where the text will be centered by this formula: Total columns / 2 - half the length of the text"
+        ;;
+    "btkdebug")
+        echo -e "BTKMAN\n\n"
+        echo -e "NAME:\n  BTKdebug\n"
+        echo -e "LIBRARY\n  Btkutils (-lbtkutils)\n"
+        echo -e "SYNOPSIS\n  #include <btkutils.h>\n  BTKdebug(const char* msg, bool endl);\n"
+        echo -e "DESCRIPTION:\n  BTKdebug()\n    Prints debug messages.\n"
+        echo -e "ERRORS:\n  BTKdebug will throw an error if not specified if endl is 1 or 0. 1 Meaning the debug message has an endline and 0 meaning no endline will be put after the debug message\n"
+        echo -e "NOTES:\n  "
+        ;;
+    "btkman")
+        echo -e "BTKMAN\n\n"
+        echo -e "NAME:\n  BTKman\n"
+        echo -e "SYNOPSIS\n  btkman [manual page...]\n"
+        echo -e "DESCRIPTION:\n  BTKman is a manual for btklib, which is a collection of utilities made for the Bebutex game engine.\n"
+        echo -e "NOTES:\n  No idea if this will go public but if this does (most likely open source), thank you for using this crappy game engine :-)\n"
+        ;;
+    "btktextcolor")
+        echo -e "BTKMAN\n\n"
+        echo -e "NAME:\n  BTKTextColor\n"
+        echo -e "LIBRARY\n  Btkutils (-lbtkutils)\n"
+        echo -e "SYNOPSIS\n  #include <btkutils.h>\n  BTKTextColor(int color);\n"
+        echo -e "DESCRIPTION:\n  BTKTextColor()\n    Prints text with variable colors\n"
+        echo -e "ERRORS:\n  Making the color variable > 7 or not defined then the function resets the text colors\n"
+        echo -e "NOTES:\n  All color codes go as follows:\n 0 - RESET\n 1 - RED\n 2 - GREEN\n 3 - YELLOW\n 4 - BLUE\n 5 - MAGENTA\n 6 - CYAN\n 7 - WHITE\n"
+        ;;
+    *)
+        echo -e "Unknown argument"
+        ;;
+esac
